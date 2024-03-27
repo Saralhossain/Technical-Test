@@ -1,46 +1,73 @@
-# Getting Started with Create React App
+# Technical Test :
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+We want to get a sense of your backend and frontend experience. Both parts must be completed to be considered for the position.
 
-## Available Scripts
+1. We want clean and correct structured code when possible.
+2. You have 2 days to complete it.
+3. We are not looking for perfect code, just to see how you think and how far you can get in the alloted time.
 
-In the project directory, you can run:
+## General Guidelines
 
-### `npm start`
+1. All code must be publicly available either via github, bitbucket, ...etc
+2. Db schemas, APIs, client app, backend also must be publicly hosted somewhere (`https://...`) use free services such as netlify, aws, heroku, ...etc
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+You are gonna be creating 2 applications (`frontend`) or if its easier 1 app with 2 routes (`react-router-dom`) and a their `backend`
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### General Guidelines
 
-### `npm test`
+- use `react` for the frontend
+- if possible use `typescript` (frontend + backend)
+- css and styles, use `styled-components`, `material-ui`, `emotion` anything that will help you speed the process
+- sites are fully responsive
+- backend uses `mongo`, `mongoose`, REST api or if you are feeling adventurous, `graphql`
+- backend is initially seeded with some fake data of at least 50 objects
+- your code contains some unit tests (backend + frontend)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+_Note:_ If you can not do it on `typescript` do it on `javascript`, but we would also like to see your efforts, so commit your unfinished (if any ) `typescript` code on a separate branch
 
-### `npm run build`
+## Frontend
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Note** you can use [create-react-app](https://create-react-app.dev/docs/getting-started) to get you up and running quick
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### 1st App: **Subscription Form** (FRONTEND)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Model Form contains the following inputs
 
-### `npm run eject`
+  - firstname (type text)
+  - lastname (type text)
+  - picture (type string | must be valid image url)
+  - gender (type radiobutton)
+  - date of birth (select | calendar)
+  - profession (type select: commedian, actor, actres, model)
+  - shoesize (type number)
+  - hair color (type number)
+  - hair length (type number)
+  - waist size in cm (type number)
+  - height in cm (type number)
+  - weight (type number)
+  - what type of castings you will like to attend (type select: movies, commercials, newspapers, magazines, ..etc)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Complete form information is send to the backend via a REST API and saved to a db (`mongo`, `mongoose`)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### 2nd App: **Search Form** (FRONTEND)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- A simple search bar where I can search for the models that are on the `db`. I can search by name, lastname, profession
+- The search bar also has a filter option where I can filter my search by model's hair color, hair length, height, profession, ...etc all selects that were on the form
+- When I complete the search I see cards of the models matching my search, the card should have the model picture and some basic information
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Backend
 
-## Learn More
+**Note** some links to get you started
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- [express](https://expressjs.com/)
+- [how to setup mongodb , mongoose in express](https://www.robinwieruch.de/mongodb-express-setup-tutorial/)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Instructions
+
+- Create a REST API to handle the **form submission** and the **search submission**
+- Information is saved to a `db` (form submission)
+- The db is originally seeded with at least 50 model objects
+- After each form submission the `db` is populated
+- Create various routes, following REST. I can `create`, `findAll`, apply filters, ..etc.
+- If I go to `https://<my-test-url>/api/models/all` I can get a json response
+- If I go to `https://<my-test-url>/api/models/search?haircolor=<filter-selected>` I can get a json response
