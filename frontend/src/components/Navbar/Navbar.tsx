@@ -14,7 +14,7 @@ const Navbar = () => {
   return (
     <AppBar position="fixed">
       <Container maxWidth="xl">
-        <Toolbar disableGutters>
+        <Toolbar disableGutters style={{display:"flex" , justifyContent:"space-betweeen" , flexDirection:"row"}}>
           <Typography
             variant="h6"
             noWrap

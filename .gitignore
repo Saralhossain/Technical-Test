@@ -1,6 +1,7 @@
 backend/node_modules/
 frontend/node_modules/
 
+backn/node_modules/
 # dependencies
 /node_modules
 frontend/.pnp
@@ -25,6 +26,10 @@ backend/.env.local
 backend/.env.development.local
 backend/.env.test.local
 backend/.env.production.local
+
+// misc backn
+
+
 
 frontend/npm-debug.log*
 frontend/yarn-debug.log*

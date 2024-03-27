@@ -32,7 +32,6 @@ const SubscriptionForm = ({
       shoesize,
       hairColor,
       hairLength,
-      braSize,
       waist,
       height,
       weight,

@@ -13,7 +13,6 @@ export interface Subscription extends ObjectWithStringIndex {
   shoesize?: number | null;
   hairColor?: string;
   hairLength?: string;
-  braSize?: string;
   waist?: number | null;
   height?: number | null;
   weight?: number | null;

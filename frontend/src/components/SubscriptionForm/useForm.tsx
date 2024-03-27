@@ -15,7 +15,6 @@ const useForm = () => {
       shoesize: filters.shoesize,
       hairColor: filters.hairColor,
       hairLength: filters.hairLength,
-      braSize: filters.braSize,
       waist: filters.waist,
       height: filters.height,
       weight: filters.weight,
